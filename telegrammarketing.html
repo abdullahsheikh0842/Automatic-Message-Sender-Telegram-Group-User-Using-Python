@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram Marketing Automatic Message Sender Script- Complete Setup Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest/umd/lucide.css" />
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+
+        .animate-pulse {
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        code {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-family: monospace;
+            word-break: break-word;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #4f46e5;
+            /* Indigo-600 */
+        }
+    </style>
+</head>
+
+<body class="min-h-screen relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 text-slate-900 overflow-hidden">
+
+    <!-- Background Effects -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/30 to-purple-500/30 rounded-full mix-blend-multiply blur-xl animate-pulse pointer-events-none z-0"></div>
+    <div class="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-indigo-400/30 to-pink-500/30 rounded-full mix-blend-multiply blur-xl animate-pulse pointer-events-none z-0" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-r from-cyan-400/30 to-blue-500/30 rounded-full mix-blend-multiply blur-xl animate-pulse pointer-events-none z-0" style="animation-delay: 0.5s;"></div>
+
+    <!-- Scrollable Content -->
+    <section class="relative z-10 h-screen overflow-auto px-4 py-16">
+        <!-- Project Title -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900">🚀 Python Telegram Marketing Automatic<br/>Message Sender Script</h1>
+            <p class="text-slate-600 mt-2">Complete installation & deployment guide from zero</p>
+        </div>
+
+        <!-- Guide Card -->
+        <div class="glass-card w-full max-w-3xl mx-auto p-6 md:p-10 rounded-3xl shadow-xl border border-white/30">
+            <div class="mb-6 flex items-center gap-3 justify-center">
+                <i data-lucide="terminal" class="w-8 h-8 text-indigo-600"></i>
+                <h2 class="text-2xl md:text-3xl font-bold text-center">Full Setup Instructions</h2>
+            </div>
+
+            <div class="space-y-6 text-base leading-relaxed text-slate-800">
+
+                <!-- Step 1 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">1️⃣ Install Python</h3>
+                    <p>
+                        Download and install Python 3.8 or higher:
+                        <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a>
+                    </p>
+                    <p>Make sure to check “Add Python to PATH” during installation.</p>
+                    <p>Verify installation by opening your terminal / command prompt and running:</p>
+                    <code>python --version</code>
+                </div>
+
+                <!-- Step 2 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">2️⃣ Get Telegram API Credentials</h3>
+                    <ol class="list-decimal pl-6 space-y-1 break-words">
+                        <li>Go to <a href="https://my.telegram.org/apps" target="_blank" rel="noopener">https://my.telegram.org/apps</a></li>
+                        <li>Log in with your Telegram phone number.</li>
+                        <li>Click “API development tools” and create a new application.</li>
+                        <li>Fill in the required fields (App title, Short name, Platform can be “Other”).</li>
+                        <li>After creation, you’ll get your <code>api_id</code> and <code>api_hash</code>.</li>
+                        <li>Keep these credentials safe — you’ll need them for the script.</li>
+                    </ol>
+                </div>
+
+                <!-- Step 3 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">3️⃣ Prepare Your Telegram Account</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Make sure the Telegram account you’ll use for this script has access to the target group or channel.</li>
+                        <li>If needed, become admin in the target group/channel to fetch member list.</li>
+                        <li>Your phone number must be accessible to receive Telegram login codes during script authentication.</li>
+                    </ul>
+                </div>
+
+                <!-- Step 4 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">4️⃣ Download Project Files</h3>
+                    <p>Download the bot script project files to your local PC.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">5️⃣ Create <code>requirements.txt</code></h3>
+                    <p>Create a file named <code>requirements.txt</code> in the project folder with this content:</p>
+                    <pre><code>telethon&gt;=1.32.0</code></pre>
+                    <p>This will install the Telethon library needed to interact with Telegram API.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">6️⃣ Install Dependencies</h3>
+                    <p>Open a terminal inside your project folder and run:</p>
+                    <code>pip install -r requirements.txt</code>
+                    <p>This installs the required Python packages.</p>
+                </div>
+
+                <!-- Step 7 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">7️⃣ Configure Your Script</h3>
+                    <p>Open <code>draft_bot.py</code> and update these variables with your info:</p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li><code>api_id</code>: Your Telegram API ID from Step 2</li>
+                        <li><code>api_hash</code>: Your Telegram API hash from Step 2</li>
+                        <li><code>phone</code>: Your phone number including country code (e.g., <code>+8801832483524</code>)</li>
+                        <li><code>group_username</code>: The username of the target Telegram group or megagroup (without @)</li>
+                    </ul>
+                </div>
+
+                <!-- Step 8 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">8️⃣ Run the Script</h3>
+                    <p>Run the bot for the first time:</p>
+                    <code>python draft_bot.py</code>
+                    <p>You will be prompted to enter the Telegram login code sent to your Telegram app.</p>
+                    <p>After login, the script will fetch the group members and create draft welcome messages.</p>
+                </div>
+
+                <!-- Step 9 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">9️⃣ Session File</h3>
+                    <p>After first login, a <code>session.session</code> file will be created in your project folder. This saves your login session.</p>
+                    <p>Keep this file safe; it allows the script to run without logging in every time.</p>
+                </div>
+
+                <!-- Step 10 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">🔟 Running on cPanel (or any Hosting)</h3>
+                    <ol class="list-decimal pl-6 space-y-2 break-words">
+                        <li>Most shared cPanel hosts don’t allow interactive Python scripts.</li>
+                        <li>If your cPanel hosting supports Python apps and SSH access, you can upload your project files and session file.</li>
+                        <li>Install dependencies via SSH:<br><code>pip install -r requirements.txt</code></li>
+                        <li>Run the script with:<br><code>python draft_bot.py</code></li>
+                        <li>If no SSH, run locally and upload the session file as needed (but script must run locally or on VPS for reliability).</li>
+                        <li>Consider a VPS (like DigitalOcean, Linode, or free Oracle Cloud) for better control.</li>
+                    </ol>
+                </div>
+
+                <!-- Step 11 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">📋 Summary of Requirements</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Python 3.8 or newer</li>
+                        <li>pip (Python package installer)</li>
+                        <li>Telethon Python library (<code>pip install telethon</code>)</li>
+                        <li>Telegram API credentials (<code>api_id</code> & <code>api_hash</code>)</li>
+                        <li>Telegram account with access to target group (admin recommended)</li>
+                        <li>SSH access on server for deployment (recommended)</li>
+                    </ul>
+                </div>
+
+                <!-- Step 12 -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">📝 Additional Tips</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Never share your <code>api_hash</code> or session files publicly.</li>
+                        <li>Follow Telegram’s Terms of Service to avoid account bans.</li>
+                        <li>Test the script on a small test group before using on large groups.</li>
+                        <li>You can customize the draft message inside the script to your preference.</li>
+                    </ul>
+                </div>
+
+                <!-- Back Button -->
+                <div class="pt-4 text-center">
+                    <a href="/" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i> Back to Home
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
